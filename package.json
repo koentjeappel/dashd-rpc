@@ -1,6 +1,6 @@
 {
-  "name": "@dashevo/dashd-rpc",
-  "description": "Dash Client Library to connect to Dash Core (dashd) via RPC",
+  "name": "pacglobald-rpc",
+  "description": "PACGlobal Client Library to connect to PACGlobal Core (pacglobald) via RPC",
   "version": "2.0.1",
   "author": {
     "name": "Stephen Pair",
@@ -29,12 +29,12 @@
     }
   ],
   "keywords": [
-    "dash",
+    "pacglobal",
     "rpc"
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/dashevo/dashd-rpc"
+    "url": "https://github.com/koentjeappel/pacglobald-rpc"
   },
   "license": "MIT",
   "main": "lib/index.js",
@@ -56,7 +56,7 @@
     "sinon": "^7.1.1"
   },
   "bugs": {
-    "url": "https://github.com/dashevo/dashd-rpc/issues"
+    "url": "https://github.com/koentjeappel/pacglobald-rpc/issues"
   },
-  "homepage": "https://github.com/dashevo/dashd-rpc"
+  "homepage": "https://github.com/koentjeappel/pacglobald-rpc"
 }

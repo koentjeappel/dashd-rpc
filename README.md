@@ -1,16 +1,16 @@
-# dashd-rpc
+# pacglobald-rpc
 
-[![Build Status](https://img.shields.io/travis/dashevo/dashd-rpc.svg?branch=master)](https://travis-ci.org/dashevo/dashd-rpc)
-[![NPM Package](https://img.shields.io/npm/v/@dashevo/dashd-rpc.svg)](https://www.npmjs.org/package/@dashevo/dashd-rpc)
+[![Build Status](https://img.shields.io/travis/koentjeappel/pacglobald-rpc.svg?branch=master)](https://travis-ci.org/koentjeappel/pacglobald-rpc)
+[![NPM Package](https://img.shields.io/npm/v/pacglobald-rpc.svg)](https://www.npmjs.org/package/pacglobald-rpc)
 
-> Dash Client Library to connect to Dash Core (dashd) via RPC
+> PACGlobal Client Library to connect to PACGlobal Core (pacglobald) via RPC
 
 ## Install
 
-dashd-rpc runs on [node](http://nodejs.org/), and can be installed via [npm](https://npmjs.org/):
+pacglobald-rpc runs on [node](http://nodejs.org/), and can be installed via [npm](https://npmjs.org/):
 
 ```bash
-npm install @dashevo/dashd-rpc
+npm install pacglobald-rpc
 ```
 
 ## Usage
@@ -27,8 +27,8 @@ Config parameters :
 
 Promise vs callback based
 
-  - `require('@dashevo/dashd-rpc/promise')` to have promises returned
-  - `require('@dashevo/dashd-rpc')` to have callback functions returned
+  - `require('pacglobald-rpc/promise')` to have promises returned
+  - `require('pacglobald-rpc')` to have callback functions returned
 	
 ### Examples
 
@@ -37,17 +37,17 @@ Config:
 ```javascript
 var config = {
     protocol: 'http',
-    user: 'dash',
-    pass: 'local321',
+    user: 'koenpeters',
+    pass: 'koenislekker',
     host: '127.0.0.1',
-    port: 19998
+    port: 9953
 };
 ```
 
 Promise based:
 
 ```javascript
-var RpcClient = require('@dashevo/dashd-rpc/promise');
+var RpcClient = require('pacglobald-rpc/promise');
 var rpc = new RpcClient(config);
 
 rpc.getRawMemPool()
@@ -68,8 +68,8 @@ Callback based (legacy):
 
 ```javascript
 var run = function() {
-  var bitcore = require('@dashevo/dashcore-lib');
-  var RpcClient = require('@dashevo/dashd-rpc');
+  var pacglobalcore = require('pacglobal-lib');
+  var RpcClient = require('pacglobald-rpc');
   var rpc = new RpcClient(config);
 
   var txids = [];
@@ -96,7 +96,7 @@ var run = function() {
         }
 
         rawtxs.map(function (rawtx) {
-          var tx = new bitcore.Transaction(rawtx.result);
+          var tx = new pacglobalcore.Transaction(rawtx.result);
           console.log('\n\n\n' + tx.id + ':', tx.toObject());
         });
 
@@ -115,7 +115,7 @@ var run = function() {
 You can dynamically access to the help of each method by doing
 
 ```
-const RpcClient = require('@dashevo/dashd-rpc');
+const RpcClient = require('pacglobald-rpc');
 var client = new RPCclient({
     protocol:'http',
     user: 'dash',
@@ -137,8 +137,8 @@ client.help('getinfo',cb);
 
 ## Contributing
 
-Feel free to dive in! [Open an issue](https://github.com/dashevo/dash-std-template/issues/new) or submit PRs.
+Feel free to dive in! [Open an issue](https://github.com/koentjeappel/dash-std-template/issues/new) or submit PRs.
 
 ## License
 
-[MIT](LICENSE) &copy; Dash Core Group, Inc.
+[MIT](LICENSE) &copy; PACGlobal Core Group, Inc.
