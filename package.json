@@ -1,6 +1,6 @@
 {
   "name": "pacglobald-rpc",
-  "description": "PACGlobal Client Library to connect to PACGlobal Core (pacglobald) via RPC",
+  "description": "Dash Client Library to connect to Dash Core (dashd) via RPC",
   "version": "2.0.1",
   "author": {
     "name": "Stephen Pair",
@@ -29,7 +29,7 @@
     }
   ],
   "keywords": [
-    "pacglobal",
+    "dash",
     "rpc"
   ],
   "repository": {
